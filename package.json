@@ -19,16 +19,19 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "publishers": {
-        "name": "@electron-forge/publisher-github",
-        "config": {
-          "repository": {
-            "owner": "AthrCC",
-            "name": "bounce-application"
-          },
-          "prelease": true
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "AthrCC",
+              "name": "bounce-application"
+            },
+            "prelease": true,
+            "draft": true
+          }
         }
-      },
+      ],
       "packagerConfig": {
         "name": "Bounce",
         "icon": "src/imgs/logo"
