@@ -59,8 +59,7 @@
   "dependencies": {
     "discord-rich-presence": "^0.0.8",
     "electron-squirrel-startup": "^1.0.0",
-    "node-fetch": "^2.6.7",
-    "update-electron-app": "^2.0.1"
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.65",

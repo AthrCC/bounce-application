@@ -1,9 +1,13 @@
-require('update-electron-app')()
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, autoUpdater } = require('electron')
 const path = require('path')
 const fetch = require('node-fetch')
 const client = require('discord-rich-presence')('958440507787329556')
 const time = Math.floor(Date.now() / 1000)
+
+const server = "https://dl.itsbounce.net"
+const url = `${server}/update/${process.platform}/${app.getVersion()}`
+
+
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 // eslint-disable-next-line global-require
@@ -68,3 +72,4 @@ const updateSong = async () => {
 
 updateSong()
 setInterval(updateSong, 5000)
+autoUpdater.setFeedURL({ url })
